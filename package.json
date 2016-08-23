@@ -1,6 +1,6 @@
 {
-  "name": "vue-env",
-  "version": "1.0.0",
+  "name": "vue-vitual-env",
+  "version": "1.0.1",
   "description": "Application environment for vue.js",
   "author": "ChaselWu <minowu@foxmail.com>",
   "license": "MIT",
@@ -73,5 +73,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/VitualReaty/vue-env"
-  },
+  }
 }
