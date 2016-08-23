@@ -1,8 +1,27 @@
-# vue-env
+# usage
 
-> Application environment for vue.js
+``` bash
+$ npm install --save vue-vitual-env
+```
 
-## Build Setup
+``` javascript
+import Vue from 'vue'
+import VueEnv from 'vue-vitual-env'
+
+Vue.use(VueEnv)
+
+// In vue application, you can use this.$env
+{
+  ready () {
+    this.$env.get('APP_DEBUG')
+  }
+}
+
+// In template, you can use
+{{ $env.get('APP_DEBUG') }}
+```
+
+# Contributing
 
 ``` bash
 # install dependencies
@@ -10,18 +29,4 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
