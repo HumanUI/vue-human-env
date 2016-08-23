@@ -1,10 +1,10 @@
 {
   "name": "vue-vitual-env",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Application environment for vue.js",
   "author": "ChaselWu <minowu@foxmail.com>",
   "license": "MIT",
-  "main": "src/vue-env.js",
+  "main": "dist/vue-env.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "webpack --progress --colors --config 'build/build.js'"
