@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import VueEnv from '../src/vue-env'
-import EnvConfig from './env.js'
 import App from './App'
+import env from '../dist/vue-env'
+import envConfig from './env.js'
 
-Vue.use(VueEnv, EnvConfig)
-console.log('When Vue use VueEnv', VueEnv.get('APP_NAME'))
+Vue.use(env, envConfig)
+console.log('When Vue use VueEnv', env.get('APP_NAME'))
 
 new Vue({
   el: 'body',
