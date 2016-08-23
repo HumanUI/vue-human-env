@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Application environment for vue.js",
   "author": "ChaselWu <minowu@foxmail.com>",
-  "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
