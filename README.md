@@ -16,7 +16,6 @@ Vue.use(env, envConfig)
 ``` javascript
 // In other js file
 import env from 'vue-vitual-env'
-
 env.get('APP_DEBUG')
 ```
 
@@ -36,7 +35,7 @@ env.get('APP_DEBUG')
 
 ### env.js file
 
-```
+```javascript
 export {
   'APP_DEBUG': true,
   'APP_NAME': 'Vue Env library'
@@ -46,9 +45,12 @@ export {
 # Contributing
 
 ``` bash
-$ install dependencies
-npm install
+// install dependencies
+$ npm install
 
-$ serve with hot reload at localhost:8080
-npm run dev
+// serve with hot reload at localhost:8080
+$ npm run dev
+
+// build this library
+$ npm run build
 ```
