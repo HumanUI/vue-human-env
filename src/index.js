@@ -1,5 +1,3 @@
-import get from 'lodash/get'
-
 class VueEnv {
 
   constructor () {
@@ -41,7 +39,15 @@ class VueEnv {
    * @return {mixin}
    */
   get (path, defaultValue) {
-    return get(this.env, path, defaultValue)
+    let paths = path.split('.')
+    let value = this.env
+
+    paths.forEach((element, index) => {
+      if (value === undefined) return false
+      value = value[element]
+    })
+
+    return value === undefined ? defaultValue : value
   }
 
   /**
