@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <p>{{ $env.get('APP_NAME') }}</p>
+    <p>{{ $env.get('APP.DEBUG') }}</p>
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 export default {
   ready () {
     console.log('When App component ready', this.$env.get('APP_DEBUG'))
+    console.log('When App component ready', this.$env.get('APP.DEBUG'))
   }
 }
 </script>
