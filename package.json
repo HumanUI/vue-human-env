@@ -9,9 +9,7 @@
     "dev": "node build/dev-server.js",
     "build": "webpack --progress --colors --config 'build/build.js'"
   },
-  "dependencies": {
-    "lodash": "^4.15.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "vue": "^1.0.21",
     "babel-runtime": "^6.0.0",
