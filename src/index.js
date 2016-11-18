@@ -19,6 +19,7 @@ class VueEnv {
     })
 
     this._addToEnv(env)
+    Vue.env = this
     Vue.prototype.$env = this
   }
 
