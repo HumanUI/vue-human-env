@@ -1,13 +1,17 @@
 # usage
 
 ``` bash
-$ npm install --save vue-vitual-env
+// Advice
+$ yarn install vue-human-env
+
+// Or
+$ npm install vue-human-env
 ```
 
 ``` javascript
 // main.js
 import Vue from 'vue'
-import env from 'vue-vitual-env'
+import env from 'vue-human-env'
 import envConfig from './env.js'  // You need create a file to save your config
 
 Vue.use(env, envConfig)
@@ -15,7 +19,7 @@ Vue.use(env, envConfig)
 
 ``` javascript
 // In other js file
-import env from 'vue-vitual-env'
+import env from 'vue-human-env'
 env.get('APP_DEBUG')
 ```
 
