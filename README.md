@@ -1,3 +1,7 @@
+![Logo](docs/vue-human.jpg)
+
+# Vue-human-env for vue2
+
 # What is vue-human-env
 
 `vue-human-env` is a object to save your application environment variables.
