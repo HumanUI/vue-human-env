@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import env from '../dist/vue-human-env'
+import env from '../src'
 import envConfig from './env.js'
 
 Vue.use(env, envConfig)
