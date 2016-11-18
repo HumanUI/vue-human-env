@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  ready () {
+  mounted () {
     console.log('When App component ready', this.$env.get('APP_DEBUG'))
     console.log('When App component ready', this.$env.get('APP.DEBUG'))
   }
