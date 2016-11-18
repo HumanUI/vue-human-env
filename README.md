@@ -1,4 +1,4 @@
-<img src="docs/vue-human.jpg"></img>
+<p align="center"><img width="320" src="docs/vue-human.jpg"></p>
 
 # vue-human-env
 
