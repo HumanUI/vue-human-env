@@ -1,48 +1,91 @@
-# usage
+# What is vue-human-env
 
-``` bash
-// Advice
-$ yarn install vue-human-env
+`vue-human-env` is a object to save your application environment variables.
+And you can get some value from it.
 
-// Or
-$ npm install vue-human-env
-```
+# Install
+
+In your terminal
 
 ``` javascript
-// main.js
+$ yarn add vue-human-env // or using `npm install`
+```
+
+In your application, create src/env/index.js file
+
+``` javascript
+// src/env/index.js
 import Vue from 'vue'
-import env from 'vue-human-env'
-import envConfig from './env.js'  // You need create a file to save your config
+import VueHumanEnv from 'vue-human-env'
+import config from './config.js'
+import configLocal from './config.local.js'  // Copy from config.js, to save local config
 
-Vue.use(env, envConfig)
+Vue.use(VueHumanEnv, config, configLocal)
+
+export default VueHumanEnv
 ```
 
-``` javascript
-// In other js file
-import env from 'vue-human-env'
-env.get('APP_DEBUG')
-```
+And then import env in your main.js
 
 ``` javascript
-// In vue application, you can use this.$env
+import Vue from 'vue'
+import env from './env'
+
+new Vue({
+  // el....
+  // store,
+  // router,
+  env
+})
+```
+# Usage
+
+### Method one
+
+``` javascript
+import Vue from 'vue'
+
+Vue.env.get('APP_DEBUG')
+```
+
+### Method two
+``` javascript
+// in Vue component
 {
-  ready () {
+  mounted () {
     this.$env.get('APP_DEBUG')
   }
 }
 ```
 
+### Method three
+
 ``` javascript
-// In template, you can use
-{{ $env.get('APP_DEBUG') }}
+import env from '/src/some/path/env'
+
+env.get('APP_DEBUG')
 ```
 
-### env.js file
+# Methods
 
-```javascript
+``` javascript
+// Simply get method
+env.get('APP_DEBUG')
+
+// Using dot to get nested object
+env.get('MAIL.MAIL_PORT')
+```
+
+# How to define a config.js
+
+``` javascript
 export {
-  'APP_DEBUG': true,
-  'APP_NAME': 'Vue Env library'
+  APP_DEBUG: true,
+  APP_NAME: 'Vue Env library',
+  // Nested object
+  MAIL: {
+    MAIL_PORT: 900
+  }
 }
 ```
 
@@ -50,7 +93,7 @@ export {
 
 ``` bash
 // install dependencies
-$ npm install
+$ yarn install
 
 // serve with hot reload at localhost:8080
 $ npm run dev
