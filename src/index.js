@@ -1,7 +1,7 @@
 class VueEnv {
 
   constructor () {
-    this._assign({})
+    this._addToEnv({})
   }
 
   /**
@@ -11,8 +11,14 @@ class VueEnv {
    * @param {Object} Vue - Vue 对象
    * @param {Object} env - env 配置对象
    */
-  install (Vue, env) {
-    this._assign(env)
+  install (Vue, ...options) {
+    let env = {}
+
+    options.forEach(item => {
+      env = { ...env, ...item }
+    })
+
+    this._addToEnv(env)
     Vue.prototype.$env = this
   }
 
@@ -24,8 +30,8 @@ class VueEnv {
    *
    * @return {this}
    */
-  _assign (env) {
-    this.env = Object.assign({}, env)
+  _addToEnv (env) {
+    this.env = { ...env }
     return this
   }
 
