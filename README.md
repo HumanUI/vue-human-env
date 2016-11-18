@@ -1,11 +1,11 @@
-![Logo](docs/vue-human.jpg)
+<img src="docs/vue-human.jpg"></img>
 
-# Vue-human-env for vue2
-
-# What is vue-human-env
+# vue-human-env
 
 `vue-human-env` is a object to save your application environment variables.
 And you can get some value from it.
+
+> Just support vue2
 
 # Install
 
