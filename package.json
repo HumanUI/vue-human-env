@@ -1,9 +1,13 @@
 {
   "name": "vue-human-env",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Vue human environment variables",
   "author": "ChaselWu <chasel.wu@vitualreaty.com>",
-  "private": true,
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "webpack --progress --colors --config 'build/build.js'"
