@@ -5,13 +5,25 @@ And you can get some value from it.
 
 # Install
 
-In your terminal
+Step 1: In your terminal
 
 ``` javascript
 $ yarn add vue-human-env // or using `npm install`
 ```
 
-In your application, create src/env/index.js file
+Step 2: Must set babel in your webpack
+
+``` javascript
+loaders: [
+  // Other loaders
+  {
+    test: /vue-human-env\/.*?js$/,
+    loader: 'babel'
+  }
+]
+```
+
+Step 3: In your application, create src/env/index.js file
 
 ``` javascript
 // src/env/index.js
@@ -25,7 +37,7 @@ Vue.use(VueHumanEnv, config, configLocal)
 export default VueHumanEnv
 ```
 
-And then import env in your main.js
+Step 4: And then import env in your main.js
 
 ``` javascript
 import Vue from 'vue'
@@ -38,6 +50,7 @@ new Vue({
   env
 })
 ```
+
 # Usage
 
 ### Method one
