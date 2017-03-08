@@ -1,6 +1,6 @@
 {
   "name": "vue-human-env",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Vue human environment variables",
   "author": "ChaselWu <chasel.wu@vitualreaty.com>",
   "main": "src/index.js",

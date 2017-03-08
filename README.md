@@ -2,6 +2,8 @@
 
 # vue-human-env
 
+> vue-human-env 2.0.2
+
 `vue-human-env` is a object to save your application environment variables.
 And you can get some value from it.
 
