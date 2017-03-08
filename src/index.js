@@ -15,7 +15,7 @@ class VueEnv {
     let env = {}
 
     options.forEach(item => {
-      env = { ...env, ...item }
+      env = Object.assign({}, env, item)
     })
 
     this._addToEnv(env)
@@ -32,7 +32,7 @@ class VueEnv {
    * @return {this}
    */
   _addToEnv (env) {
-    this.env = { ...env }
+    this.env = Object.assign({}, env)
     return this
   }
 
